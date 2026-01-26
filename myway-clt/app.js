@@ -1,0 +1,42 @@
+// 🔥 Firebase Config goes here next
+const firebaseConfig = {
+  apiKey: "AIzaSyD88ZxhCOxPs1IFzITYAGO0gpIyp4tLzr8",
+  authDomain: "my-way-clt-2026.firebaseapp.com",
+  projectId: "my-way-clt-2026",
+  storageBucket: "my-way-clt-2026.firebasestorage.app",
+  messagingSenderId: "787144518837",
+  appId: "1:787144518837:web:53f10cf593b7296c8622fc"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// Request Ride Button
+document.getElementById("requestRide").onclick = async () => {
+
+  // Get input values
+  const pickupLocation = document.getElementById("pickup").value;
+  const dropoffLocation = document.getElementById("dropoff").value;
+
+  // Simple validation
+  if (pickupLocation === "" || dropoffLocation === "") {
+    alert("Please enter BOTH pickup and dropoff locations 🚗");
+    return;
+  }
+
+  // Save ride request to Firestore
+  await db.collection("rides").add({
+    pickup: pickupLocation,
+    dropoff: dropoffLocation,
+    status: "Requested",
+    createdAt: new Date()
+  });
+
+  // Send rider to status page
+window.location.href = "status.html";
+
+  // Clear inputs after saving
+  document.getElementById("pickup").value = "";
+  document.getElementById("dropoff").value = "";
+};

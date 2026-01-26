@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MyWay CLT - Receipt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="card">
+
+    <!-- Logo -->
+    <img src="logo.png" class="logo" />
+
+    <!-- Title -->
+    <h1>Ride Receipt 🧾</h1>
+    <p class="subtitle">Thanks for riding with MyWay CLT 🌊</p>
+
+    <!-- Receipt Info -->
+    <div id="receiptBox" class="ride-info">
+      Loading receipt...
+    </div>
+
+    <!-- Divider -->
+    <hr style="margin:20px 0; opacity:0.2;">
+
+    <!-- Rating -->
+    <h3>Rate Your Driver ⭐</h3>
+
+    <div class="rating">
+      <button type="button" class="star">1</button>
+      <button type="button" class="star">2</button>
+      <button type="button" class="star">3</button>
+      <button type="button" class="star">4</button>
+      <button type="button" class="star">5</button>
+    </div>
+
+    <!-- Tip -->
+    <h3>Add a Tip 💰</h3>
+
+    <div class="tips">
+      <button type="button" class="tipBtn" data-tip="2">$2</button>
+      <button type="button" class="tipBtn" data-tip="5">$5</button>
+      <button type="button" class="tipBtn" data-tip="10">$10</button>
+    </div>
+
+    <p id="tipMessage"></p>
+
+    <!-- Back Home -->
+    <a href="index.html" class="btn">Back Home</a>
+
+  </div>
+
+  <!-- Receipt Script -->
+  <script src="receipt.js"></script>
+
+</body>
+</html>
