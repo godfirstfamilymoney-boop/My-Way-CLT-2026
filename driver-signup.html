@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MyWay CLT - Driver Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="card">
+
+    <img src="logo.png" class="logo" />
+
+    <h1>Driver Signup 🚘</h1>
+    <p class="subtitle">Create your driver account</p>
+
+    <input type="text" id="name" placeholder="Driver Name" required />
+
+    <input type="email" id="email" placeholder="Email" required />
+
+    <input type="password" id="password" placeholder="Password" required />
+
+    <input type="number" id="year" placeholder="Vehicle Year (2015+)" required />
+
+    <input type="text" id="make" placeholder="Vehicle Make (Toyota, Honda...)" required />
+
+    <input type="text" id="model" placeholder="Vehicle Model (Camry, Accord...)" required />
+
+    <button id="signupBtn" class="btn">Create Account</button>
+
+    <a href="driver-login.html" class="btn">Already Have Account? Login</a>
+
+  </div>
+
+  <script src="driver-signup.js"></script>
+
+</body>
+</html>
