@@ -1,1 +1,1 @@
-# My-Way-CLT-2026
+# MyWay-CLT
