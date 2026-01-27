@@ -3,20 +3,21 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  height: 100vh;
+  background: radial-gradient(circle at top, #00b4ff, #05070a);
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .card {
+  background: rgba(255,255,255,0.08);
+  padding: 40px;
+  border-radius: 20px;
   width: 360px;
-  padding: 35px;
-  border-radius: 25px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.55);
-  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  box-shadow: 0 0 25px rgba(0,255,255,0.25);
+  backdrop-filter: blur(12px);
 }
 
 .logo {
@@ -146,3 +147,4 @@ h3 {
 .dot.active {
   background: limegreen;
 }
+
