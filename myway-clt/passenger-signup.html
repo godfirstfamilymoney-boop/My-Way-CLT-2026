@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MyWay CLT - Passenger Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="card">
+    <img src="logo.png" class="logo" />
+
+    <h1>Passenger Signup 🌊</h1>
+
+    <input id="name" placeholder="Full Name" required />
+    <input id="email" type="email" placeholder="Email" required />
+    <input id="password" type="password" placeholder="Password" required />
+
+    <button id="signupBtn" class="btn">Create Account</button>
+
+    <p id="message"></p>
+
+    <a href="passenger-login.html" class="btn">Already have an account?</a>
+  </div>
+
+  <script src="passenger-signup.js"></script>
+</body>
+</html>
