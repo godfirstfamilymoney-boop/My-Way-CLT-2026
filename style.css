@@ -1,150 +1,144 @@
-/* ===== MYWAY CLT WAVE THEME ===== */
-
-body {
+/* ===== RESET ===== */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #00b4ff, #05070a);
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BACKGROUND ===== */
+body {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
 
-.card {
-  background: rgba(255,255,255,0.08);
-  padding: 40px;
-  border-radius: 20px;
-  width: 360px;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(0,255,255,0.25);
-  backdrop-filter: blur(12px);
-}
-
-.logo {
-  width: 120px;
-  margin-bottom: 15px;
-  border-radius: 15px;
-}
-
-h1 {
+  background:
+    radial-gradient(circle at top, #00b4ff, #05070a 65%),
+    linear-gradient(135deg, #00f6ff33, #7b2ff733);
   color: white;
-  font-size: 32px;
-  margin: 10px 0;
+}
+
+/* ===== MAIN CARD ===== */
+.card {
+  width: 360px;
+  padding: 32px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 0 30px rgba(0, 180, 255, 0.35),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+
+  text-align: center;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  width: 90px;
+  margin-bottom: 16px;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
 }
 
 .subtitle {
-  color: #dcdcdc;
-  margin-bottom: 25px;
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 20px;
 }
 
+/* ===== INPUTS ===== */
 input {
   width: 100%;
-  padding: 14px;
-  margin: 10px 0;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+
   border-radius: 12px;
   border: none;
   outline: none;
-  font-size: 15px;
+
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 14px;
 }
 
+input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ===== BUTTON ===== */
+.btn,
 button {
-  margin-top: 20px;
   width: 100%;
   padding: 14px;
-  border: none;
-  border-radius: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  background: linear-gradient(to right, #00f2ff, #ffd000);
-}
-/* ===== Ride Status Screen ===== */
+  margin-top: 8px;
 
-.status-box {
-  text-align: left;
-  margin-top: 25px;
-  padding: 15px;
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.status-box p {
-  font-size: 16px;
-  margin: 12px 0;
-  color: white;
-}
-
-/* Status dots */
-.dot {
-  height: 12px;
-  width: 12px;
-  background: gray;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.dot.active {
-  background: lime;
-  box-shadow: 0 0 10px lime;
-}
-/* ===== Bigger Clear Text for Driver Screen ===== */
-.driver-ride-details {
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-/* ETA + Distance box */
-.eta-box{
-  margin: 12px 0 18px;
-  padding: 12px 14px;
   border-radius: 14px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.12);
-  color: #e9fbff;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  text-shadow: 0 2px 10px rgba(0,0,0,.35);
-}
-.rating button,
-.tips button {
-  font-size: 13px;
-  padding: 8px 10px;
-  border-radius: 8px;
-}
-h3 {
+  border: none;
+  cursor: pointer;
+
   font-size: 15px;
-  margin: 10px 0 6px;
-}
-/* ⭐ Rating + Tip Buttons Fix */
-.rating, .tips {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  font-weight: bold;
+  color: #05070a;
+
+  background: linear-gradient(90deg, #00f6ff, #7bffaf);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.rating button,
-.tips button {
-  width: auto !important;
-  padding: 8px 12px;
-  font-size: 13px;
-  border-radius: 10px;
+button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(0, 255, 255, 0.9);
 }
-.dot {
-  height: 14px;
-  width: 14px;
-  border-radius: 50%;
+
+/* ===== RIDE INFO BOX ===== */
+.ride-info {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 14px;
+  border-radius: 14px;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+/* ===== STATUS DOTS ===== */
+.status-box {
+  margin-top: 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.status-box span {
   display: inline-block;
-  margin-right: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
   background: gray;
 }
 
-.dot.active {
-  background: limegreen;
+.active {
+  background: #00ff9c !important;
+}
+
+/* ===== LINKS ===== */
+a {
+  display: inline-block;
+  margin-top: 16px;
+  color: #00f6ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
