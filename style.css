@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 350px;
+  color: white;
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  width: 95%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: gold;
+  font-size: 16px;
+  cursor: pointer;
+}
